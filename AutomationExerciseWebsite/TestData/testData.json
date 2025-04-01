@@ -1,0 +1,32 @@
+{
+  "LoginData": {
+    "ValidCredentials": [
+      {
+        "Username": "testuser3@gmail.com",
+        "Password": "foodpunk1212"
+      }
+    ],
+    "InvalidCredentials": [
+      {
+        "Username": "invaliduser",
+        "Password": "12345"
+      }
+    ],
+    "LockedOutUser": [
+      {
+        "Username": "locked_out_user",
+        "Password": "secret_sauce"
+      }
+    ]
+  },
+
+  "SignUpData": {
+    "UserDaniel": [
+      {
+        "Name": "test2",
+        "Email": "test2@mail.ru",
+        "Password": "test2password"
+      }
+    ]
+  }
+}
