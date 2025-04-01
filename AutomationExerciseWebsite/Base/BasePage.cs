@@ -69,4 +69,14 @@ public abstract class BasePage
         var dropDown= driver.FindElement(locator);
         new SelectElement(dropDown).SelectByIndex(optionIndex);
     }
+    
+    public void ScrollToElement(By locator)
+    {
+        IJavaScriptExecutor jsExecutor = (IJavaScriptExecutor)driver;
+        // driver.WaitForElementVisible(locator);
+        // Scroll until the element is in view
+        var elementToScrollTo = driver.FindElement(locator);
+        jsExecutor.ExecuteScript("arguments[0].scrollIntoView(true ,{ behavior: 'smooth', block: 'center' });", elementToScrollTo);
+        
+    }
 }
