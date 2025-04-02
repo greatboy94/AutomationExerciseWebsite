@@ -23,9 +23,18 @@
   "SignUpData": {
     "UserDaniel": [
       {
-        "Name": "test2",
-        "Email": "test2@mail.ru",
-        "Password": "test2password"
+        "Name": "Daniel",
+        "Email": "Daniel@gmail.com",
+        "Password": "123123",
+        "FirstName": "Daniel",
+        "LastName": "XXX",
+        "Company": "Vention",
+        "Address1": "Times Square Avenue",
+        "Address2": "home 20",
+        "State": "New York",
+        "City": "New York City",
+        "Zipcode": "100100",
+        "MobileNumber": "+998903333333"
       }
     ]
   }
