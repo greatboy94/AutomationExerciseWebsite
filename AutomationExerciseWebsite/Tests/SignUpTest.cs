@@ -10,6 +10,8 @@ namespace AutomationExerciseWebsite.Tests;
 [Parallelizable(ParallelScope.Children)]
 public class SignUpTest : BaseTest
 {
+    private const string ExpectedAccountCreatedText = "ACCOUNT CREATED!";
+    
     [Test]
     [TestCaseSource(typeof(TestDataJsonReader), nameof(TestDataJsonReader.GetSignUpUserData))]
     public void SignUp_WithValidUser(UserModel user)
@@ -19,9 +21,10 @@ public class SignUpTest : BaseTest
         SignUpPage signUpPage = homePage
             .ClickLoginButton()
             .ClickSignUpButton(user.Name, user.Email)
-            .CreateAccountButton(user.Password);
-        
-        Thread.Sleep(5000);
+            .CreateAccountWithCredentials(user.Password, user.FirstName, user.LastName, user.Company, user.Address1, user.Address2, user.City, user.State, user.Zipcode, user.MobileNumber);
+
+        AccountCreatedPage accountCreatedPage = new AccountCreatedPage(GetDriver());
+        Assert.That(accountCreatedPage.GetAccountCreatedText(), Is.EqualTo(ExpectedAccountCreatedText), "Account not created");
         
     }
 }

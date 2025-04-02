@@ -61,7 +61,16 @@ public class TestDataJsonReader
                 {
                     Name = item["Name"].ToString(),
                     Email = item["Email"].ToString(),
-                    Password = item["Password"].ToString()
+                    Password = item["Password"].ToString(),
+                    FirstName = item["FirstName"].ToString(),
+                    LastName = item["LastName"].ToString(),
+                    Company = item["Company"].ToString(),
+                    Address1 = item["Address1"].ToString(),
+                    Address2 = item["Address2"].ToString(),
+                    State = item["State"].ToString(),
+                    City = item["City"].ToString(),
+                    Zipcode = item["Zipcode"].ToString(),
+                    MobileNumber = item["MobileNumber"].ToString()
                 }
             };
         }
